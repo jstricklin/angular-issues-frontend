@@ -20,7 +20,7 @@ class App extends Component {
                 <div className='main container-flex pt-3'>
                     <div className='col-8 mx-auto'>
                         <div className='col-12 text-left border-bottom'><h2>Recent Angular Github Issues</h2></div>
-                            { this.state.loading ? <h3>loading...</h3> : <IssuesComponent issues={this.state.issuesArr} /> }
+                            { this.state.loading ? <h3>loading...</h3> : <IssuesComponent loading={this.state.loading} issues={this.state.issuesArr} /> }
                     </div>
                 </div>
             </div>

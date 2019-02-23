@@ -9,10 +9,15 @@ class IssueComponent extends Component {
     }
     render() {
         return (
-            <div>
-                <p>Single Issue reporting in</p>
+            <div className='issue'>
+                <div className='issue-header'>
+                    <p>{this.props.issue.title}</p>
+                </div>
+                <div className='issue-body'>
+                    <p>{this.props.issue.body}</p>
+                </div>
             </div>
-        );
+            );
     }
 }
 

@@ -11,8 +11,7 @@ class IssuesComponent extends Component {
     render() {
         return (
             <div className='issues-container col-12 mx-auto d-flex justify-content-center flex-wrap'>
-                { this.props.loading ? <h3>loading...</h3> : this.props.issues.map(issue => <div className='issue' key={issue.id}>{issue.title}</div>) }
-                <IssueComponent />
+                { this.props.issues.map(issue => <IssueComponent key={issue.id} issue={issue}/>) }
             </div>
             );
 }
