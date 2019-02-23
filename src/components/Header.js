@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 class HeaderComponent extends Component {
     render() {
         return (
-            <div>
-                <h3>Header works...</h3>
+            <div className='header d-flex align-items-center justify-content-center p-3'>
+                <div className='d-flex col-10 justify-content-between align-items-center'>
+                    <h3 className='title'>Angular Issues Tracker</h3>
+                    <p>A Coding Assessment for Levels Beyond</p>
+                </div>
             </div>
             );
     }
