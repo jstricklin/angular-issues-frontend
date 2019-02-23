@@ -5,7 +5,7 @@ import IssuePage from './components/IssuePage.js';
 
 const routes = [
     {
-        path: "/issue",
+        path: "/:id",
         component: IssuePage
     }
 ]
