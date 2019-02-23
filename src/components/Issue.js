@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class IssueComponent extends Component {
     constructor(props) {
@@ -13,9 +14,10 @@ class IssueComponent extends Component {
                 <div className='issue-header'>
                     <p>{this.props.issue.title}</p>
                 </div>
+                { this.props.location.seach === this.props.issue.id ?
                 <div className='issue-body'>
                     <p>{this.props.issue.body}</p>
-                </div>
+                </div> : "nada..." }
             </div>
             );
     }
