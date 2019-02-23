@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HeaderComponent from './components/Header.js'
+import IssuesComponent from './components/Issues.js';
 import logo from './logo.svg';
 import './App.css';
 const baseURL = "https://api.github.com/repos/angular/angular/issues";
@@ -16,13 +17,10 @@ class App extends Component {
         return (
             <div className="App">
                 <HeaderComponent />
-                <div className='main pt-3'>
-                    <div className='container-flex'>
-                        <div className='col-12'><h2>Recent Angular Github Issues</h2></div>
-                        <div className='issues-container col-8 mx-auto d-flex justify-content-center flex-wrap'>
-                            { this.state.loading ? <h3>loading...</h3> : this.state.issuesArr.map(issue => <div className='issue' key={issue.id}>{issue.title}</div>) }
-                        </div>
-
+                <div className='main container-flex pt-3'>
+                    <div className='col-8 mx-auto'>
+                        <div className='col-12 text-left border-bottom'><h2>Recent Angular Github Issues</h2></div>
+                            { this.state.loading ? <h3>loading...</h3> : <IssuesComponent issues={this.state.issuesArr} /> }
                     </div>
                 </div>
             </div>
