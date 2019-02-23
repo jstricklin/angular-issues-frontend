@@ -11,7 +11,7 @@ class IssuesComponent extends Component {
     render() {
         return (
             <div className='issues-container col-12 mx-auto d-flex justify-content-center flex-wrap'>
-                { this.props.issues.map(issue => <IssueComponent fragment={this.props.fragment} key={issue.id} issue={issue}/>) }
+                { this.props.issues.map(issue => <div key={issue.id} style={{width: "250px", margin: "1em"}}><IssueComponent fragment={this.props.fragment} issue={issue}/></div>) }
             </div>
             );
 }
