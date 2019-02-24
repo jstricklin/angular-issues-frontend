@@ -20,7 +20,7 @@ class App extends Component {
         return (
             <div className="App">
                 <HeaderComponent />
-                <div className='main container-flex pt-3'>
+                <div className='main pt-5 container-flex pt-3'>
                     <ConfiguredRouter loading={this.state.loading} issues={this.state.issuesArr} />
                 </div>
             </div>

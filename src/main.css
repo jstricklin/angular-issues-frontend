@@ -6,7 +6,7 @@
 html {
     background-color: var(--main-color);
 }
-p {
+p, h2 {
     margin: 0;
     padding: 0;
 }
@@ -25,11 +25,21 @@ a {
     color: var(--dark-color);
     text-decoration: none;
 }
+.content-title {
+    z-index: 9998;
+    background-color: var(--main-color);
+}
+.content-title h2 {
+    margin: 0;
+    padding: 0;
+}
 .header {
     /* background-color: rgba(175, 200, 225, 1); */
     background-color: var(--dark-color);
+    width: 100%;
     color: white;
     height: 50px;
+    z-index: 9999;
 }
 .header .title {
     font-weight: 250;
@@ -44,7 +54,8 @@ a {
     background-color: var(--main-color);
 }
 .issues-container {
-
+    /* padding-top:100px; */
+    z-index: 0;
 }
 .issue {
     width: 100%;
