@@ -17,6 +17,7 @@ class IssueThumb extends Component {
                         <p><span className='text-muted'>Issue: </span>{this.props.issue.title}</p>
                         <p><span className='text-muted'>Created: </span>{moment(this.props.issue.created_at).fromNow()}</p>
                         <p><span className='text-muted'>Updated: </span>{moment(this.props.issue.updated_at).fromNow()}</p>
+                        <p><span className='text-muted'>Assignees:</span> {this.props.issue.assignees.length}</p>
                     </div>
                     <div className='user'><p><span className='text-muted'>Creator: </span> {this.props.issue.user.login}</p><img src={this.props.issue.user.avatar_url} className='user-avatar' alt="user avatar" /></div>
                 </div>
