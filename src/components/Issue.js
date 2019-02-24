@@ -11,10 +11,10 @@ class IssueComponent extends Component {
     render() {
         return (
             <div className='issue'>
-                <div className='issue-header border-bottom p-0 m-0 d-flex justify-content-around align-items-center'>
+                <div className='issue-header border-bottom p-0 m-0 d-flex justify-content-between align-items-center'>
                     <div className='issue-info text-left'>
                         <p><span className='text-muted'>Issue: </span>{this.props.issue.title}</p>
-                        <p><span className='text-muted'>Issue URL:</span> {this.props.issue.url}</p>
+                        <p><span className='text-muted'>Issue URL:</span> <a href={this.props.issue.html_url}>{this.props.issue.html_url}</a> </p>
                         <p><span className='text-muted'>State:</span> {this.props.issue.state}</p>
                     </div>
                     <div className='m-1 user'>

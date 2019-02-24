@@ -6,8 +6,8 @@ const IssuePage = (props) => {
     const issue = props.issues.filter(issue => issue.id === +id )[0]
     console.log('issue', issue);
     return (
-        <div className='col-8 mx-auto'>
-            <div className='col-12 d-flex p-0 m-3 justify-content-between border-bottom'><h3>Issue ID: {id}</h3><h3>{issue ? issue.title : null}</h3></div>
+        <div className='col-8 mx-auto pt-4'>
+            <div className='col-12 d-flex p-0 my-3 justify-content-between border-bottom'><h5>Issue ID: {id}</h5><h5>{issue ? issue.title : null}</h5></div>
             { issue ? <Issue pathID={id} issue={issue} /> : <h1>Loading Issue...</h1> }
         </div>
     );

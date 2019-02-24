@@ -6,6 +6,8 @@ import './App.css';
 import Home from './components/Home.js';
 import ConfiguredRouter from './Router.js';
 
+const moment = require('moment');
+
 const baseURL = "https://api.github.com/repos/angular/angular/issues";
 
 class App extends Component {
@@ -27,7 +29,10 @@ class App extends Component {
             );
     }
     componentDidMount() {
-        return fetch(baseURL)
+        const date = new Date();
+        date.setDate(date.getDate() - 7);
+        const dateParam = moment(date).toISOString();
+        return fetch(`${baseURL}?since=${dateParam}&sort=created`)
             .then(res => res.json())
             .then(json => {
                 this.setState(prev => ({

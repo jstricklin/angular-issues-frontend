@@ -6,7 +6,7 @@
 html {
     background-color: var(--main-color);
 }
-p, h3 {
+p, h5 {
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,11 @@ a {
     font-weight: 400;
     font-size: 9pt;
 }
-.issue-body a, .issue a {
+.issue a {
+    font-size: 9pt;
+    color: salmon;
+}
+.issue-body a {
     color: salmon;
     font-size: 10pt;
 }
@@ -33,16 +37,20 @@ a {
     z-index: 9998;
     background-color: var(--main-color);
 }
-.content-title h3 {
+.content-title h5 {
     margin: 0;
     padding: 0;
+}
+.logo {
+    width: 50px;
+    margin-right: 1rem;
 }
 .header {
     /* background-color: rgba(175, 200, 225, 1); */
     background-color: var(--dark-color);
     width: 100%;
     color: white;
-    height: 50px;
+    height: 60px;
     z-index: 9999;
 }
 .header .title {
