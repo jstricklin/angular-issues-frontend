@@ -10,6 +10,21 @@ p {
     margin: 0;
     padding: 0;
 }
+a {
+    color: black;
+}
+.issue-header {
+    font-weight: bold;
+    font-size: 11pt;
+}
+.issue-body a, .issue a {
+    color: salmon;
+    font-size: 14pt;
+}
+.issue-body a:hover, .issue a:hover {
+    color: var(--dark-color);
+    text-decoration: none;
+}
 .header {
     /* background-color: rgba(175, 200, 225, 1); */
     background-color: var(--dark-color);
@@ -41,4 +56,13 @@ p {
 .issue-body {
     font-size: 10pt;
     text-align: left;
+}
+.user {
+    /* border: 1px solid var(--dark-color); */
+    /* border-radius: 5px; */
+    font-size: 9pt;
+}
+.user-avatar {
+    width: 75px;
+    height: 75px;
 }
