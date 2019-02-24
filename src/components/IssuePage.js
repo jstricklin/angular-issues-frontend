@@ -7,7 +7,7 @@ const IssuePage = (props) => {
     console.log('issue', issue);
     return (
         <div className='col-8 mx-auto'>
-            <div className='col-12 d-flex p-0 m-3 justify-content-between border-bottom'><h2>Issue ID: {id}</h2><h2>{issue ? issue.title : null}</h2></div>
+            <div className='col-12 d-flex p-0 m-3 justify-content-between border-bottom'><h3>Issue ID: {id}</h3><h3>{issue ? issue.title : null}</h3></div>
             { issue ? <Issue pathID={id} issue={issue} /> : <h1>Loading Issue...</h1> }
         </div>
     );
