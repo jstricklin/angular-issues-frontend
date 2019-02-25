@@ -11,7 +11,7 @@ class IssueComponent extends Component {
     render() {
         return (
             <div className='issue'>
-                <Link to='/'>&larr; Go Back</Link>
+                <Link to='/'><button className='btn btn-secondary'><p>&lt; Back</p></button></Link>
                 <div className='issue-header border-bottom p-0 m-0 d-flex justify-content-around align-items-center'>
                     <div className='issue-info text-left'>
                         <p><span className='text-muted'>Issue: </span>{this.props.issue.title}</p>

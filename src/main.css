@@ -7,7 +7,7 @@ html {
     background-color: var(--main-color);
 }
 .issue p {
-    margin: 1em;
+    /* margin: 1em; */
     padding: 0;
 }
 p, h5 {
@@ -16,6 +16,15 @@ p, h5 {
 }
 a {
     color: black;
+}
+.loading {
+    height: 100px;
+    width: 100px;
+}
+.page-nav p, button p {
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
 }
 .issue-header {
     font-weight: 400;

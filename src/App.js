@@ -21,7 +21,8 @@ class App extends Component {
         }
         this.loadPage = this.loadPage.bind(this);
     }
-    loadPage(page) {
+    loadPage(page, disabled) {
+        if (disabled) return;
         this.setState({ loading: true });
         return fetch(this.state.page[page].url)
             .then(res => {
@@ -45,6 +46,7 @@ class App extends Component {
         return fetch(`${baseURL}?since=${dateParam}&sort=created`)
             .then(res => {
                 let page = parse(res.headers.get('Link'));
+                console.log(res.headers.get('X-RateLimit-Limit'), res.headers.get('X-RateLimit-Remaining'), res.headers.get('X-RateLimit-Reset'));
                 this.setState(prev => ({
                     page: page,
                 }));
