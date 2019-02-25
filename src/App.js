@@ -33,7 +33,10 @@ class App extends Component {
         date.setDate(date.getDate() - 7);
         const dateParam = moment(date).toISOString();
         return fetch(`${baseURL}?since=${dateParam}&sort=created`)
-            .then(res => res.json())
+            .then(res => {
+                console.log(res.headers);
+                return res.json();
+            })
             .then(json => {
                 this.setState(prev => ({
                     issuesArr: json,
