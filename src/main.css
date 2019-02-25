@@ -6,6 +6,10 @@
 html {
     background-color: var(--main-color);
 }
+.issue p {
+    margin: 1em;
+    padding: 0;
+}
 p, h5 {
     margin: 0;
     padding: 0;
@@ -19,12 +23,9 @@ a {
     min-height: 150px;
 }
 .issue a {
+    font-weight: 600;
     font-size: 9pt;
     color: salmon;
-}
-.issue-body a {
-    color: salmon;
-    font-size: 10pt;
 }
 .issue-group-item {
     width: 400px;
@@ -97,4 +98,5 @@ a {
 .user-avatar {
     width: 75px;
     height: 75px;
+    /* margin-top: 1em; */
 }

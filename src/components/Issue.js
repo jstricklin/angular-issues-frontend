@@ -12,16 +12,18 @@ class IssueComponent extends Component {
         return (
             <div className='issue'>
                 <Link to='/'>&larr; Go Back</Link>
-                <div className='issue-header border-bottom p-0 m-0 d-flex justify-content-between align-items-center'>
+                <div className='issue-header border-bottom p-0 m-0 d-flex justify-content-around align-items-center'>
                     <div className='issue-info text-left'>
                         <p><span className='text-muted'>Issue: </span>{this.props.issue.title}</p>
                         <p><span className='text-muted'>Issue URL:</span> <a href={this.props.issue.html_url}>{this.props.issue.html_url}</a> </p>
                         <p><span className='text-muted'>State:</span> {this.props.issue.state}</p>
                     </div>
                     <div className='m-1 user'>
-                        <h6>User ID</h6>
-                        <p>{this.props.issue.user.login}</p>
-                        <img src={this.props.issue.user.avatar_url} className='user-avatar' alt="user avatar" />
+                            <h6>User ID</h6>
+                        <a href={this.props.issue.user.html_url}>
+                            <p>{this.props.issue.user.login}</p>
+                            <img src={this.props.issue.user.avatar_url} className='user-avatar' alt="user avatar" />
+                        </a>
                     </div>
                 </div>
                 <div className='issue-body mt-3 d-flex flex-wrap justify-content-around'>
