@@ -25,7 +25,7 @@ a {
 .issue a {
     font-weight: 600;
     font-size: 9pt;
-    color: salmon;
+    color: lightcoral;
 }
 .issue-group-item {
     width: 400px;
@@ -76,7 +76,7 @@ a {
     min-height: 200px;
     padding: 1rem;
     background-color: white;
-    border: 1px solid var(--dark-color);
+    border: 1px solid lightgrey;
     border-radius: 5px;
 }
 .issue-body {
@@ -96,6 +96,8 @@ a {
     font-size: 9pt;
 }
 .user-avatar {
+    border-radius: 5px;
+    border: 1px solid lightgrey;
     width: 75px;
     height: 75px;
     /* margin-top: 1em; */
