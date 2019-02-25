@@ -23,7 +23,7 @@ const ConfiguredRouter = (props) => (
         <div>
             {routes.map((route, i) => <RouteConstructor key={i} {...route} data={props} />)}
             <Route path='/' exact render={data => (
-                <Home {...data} issues={props.issues} />
+                <Home {...data} page={props.page} loading={props.loading} loadPage={props.loadPage} issues={props.issues} />
                 )} />
         </div>
     </Router>
